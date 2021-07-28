@@ -27,15 +27,15 @@ import (
 type FooSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of Foo. Edit foo_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	DeploymentName string `json:"deploymentName"`
+	Replicas       *int   `json:"replicas"`
 }
 
 // FooStatus defines the observed state of Foo
 type FooStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	AvailableReplicas int `json:"availableReplicas"`
 }
 
 //+kubebuilder:object:root=true
