@@ -1,0 +1,17 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+projectName: kubebuilder-sample-controller
+repo: github.com/pkbhowmick/kubebuilder-sample-controller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: samplecontroller
+  kind: Foo
+  path: github.com/pkbhowmick/kubebuilder-sample-controller/apis/samplecontroller/v1alpha1
+  version: v1alpha1
+version: "3"
