@@ -18,6 +18,7 @@ package samplecontroller
 
 import (
 	"context"
+	"k8s.io/klog/v2"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -50,6 +51,7 @@ func (r *FooReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.R
 	_ = log.FromContext(ctx)
 
 	// your logic here
+	klog.Info("Got Foo event")
 
 	return ctrl.Result{}, nil
 }
