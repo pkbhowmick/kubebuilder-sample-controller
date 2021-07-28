@@ -28,14 +28,20 @@ type FooSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 	DeploymentName string `json:"deploymentName"`
-	Replicas       *int   `json:"replicas"`
+	Replicas       *int32 `json:"replicas"`
 }
+
+type FooPhase string
+
+const (
+	FooPhaseRunning FooPhase = "Running"
+)
 
 // FooStatus defines the observed state of Foo
 type FooStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
-	AvailableReplicas int `json:"availableReplicas"`
+	Phase FooPhase `json:"phase,omitempty"`
 }
 
 //+kubebuilder:object:root=true
