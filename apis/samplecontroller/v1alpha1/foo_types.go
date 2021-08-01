@@ -28,7 +28,8 @@ type FooSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 	DeploymentName string `json:"deploymentName"`
-	Replicas       *int32 `json:"replicas"`
+	// +optional
+	Replicas *int32 `json:"replicas"`
 }
 
 type FooPhase string

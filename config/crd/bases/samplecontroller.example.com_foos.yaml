@@ -45,7 +45,6 @@ spec:
                 type: integer
             required:
             - deploymentName
-            - replicas
             type: object
           status:
             description: FooStatus defines the observed state of Foo
