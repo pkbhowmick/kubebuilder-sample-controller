@@ -159,7 +159,7 @@ func newDeployment(foo *samplecontrollerv1alpha1.Foo) *appsv1.Deployment {
 					Containers: []corev1.Container{
 						{
 							Name:  "nginx",
-							Image: "nginx:latest",
+							Image: "nginx:alpine",
 						},
 					},
 				},
